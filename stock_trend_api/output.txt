@@ -1,0 +1,12 @@
+Testing API with chart: test_chart.png
+Y-axis range: 80 to 180
+
+Sending request...
+
+[SUCCESS] API Response:
+
+Predicted Trend: Down
+Confidence: {'Down': 0.4278889000415802, 'Sideways': 0.1613045483827591, 'Up': 0.4108065664768219}
+
+Chatbot Message:
+Model view: The current chart pattern looks **Down** to the model. The model is not very confident; signals are mixed. The price has been moving lower. This can indicate selling pressure or weakness in the short term, but bounces can still happen. With a **medium risk profile**, balancing risk and reward is important. You might want to combine trend analysis with fundamentals, news, and proper risk management. For a **short-term horizon**, trends can change quickly. Short-term traders often pay attention to support/resistance levels, volume, and intraday volatility. Note: This is not financial advice. Please do your own research (DYOR) and consider consulting a qualified financial advisor before making any investment decisions.

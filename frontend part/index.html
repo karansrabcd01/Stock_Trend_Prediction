@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Trend Predictor - AI-Powered Analysis</title>
+    <meta name="description" content="Upload your stock chart and get AI-powered trend predictions with personalized insights and recommendations.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Background Elements -->
+    <div class="bg-gradient"></div>
+    <div class="bg-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 35L15 20L25 28L35 5" stroke="url(#gradient)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        <defs>
+                            <linearGradient id="gradient" x1="5" y1="5" x2="35" y2="35">
+                                <stop offset="0%" stop-color="#667eea"/>
+                                <stop offset="100%" stop-color="#764ba2"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                    <h1>Stock Trend AI</h1>
+                </div>
+                <nav class="nav">
+                    <a href="#features" class="nav-link">Features</a>
+                    <a href="#how-it-works" class="nav-link">How It Works</a>
+                    <a href="#predictor" class="nav-link nav-link-primary">Try Now</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-icon">🚀</span>
+                    <span>AI-Powered Stock Analysis</span>
+                </div>
+                <h2 class="hero-title">Predict Stock Trends with <span class="gradient-text">Artificial Intelligence</span></h2>
+                <p class="hero-description">Upload your stock chart screenshot and get instant AI-powered predictions with personalized insights based on your risk profile and investment horizon.</p>
+                <div class="hero-cta">
+                    <a href="#predictor" class="btn btn-primary btn-large">
+                        <span>Start Predicting</span>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <a href="#how-it-works" class="btn btn-secondary btn-large">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">Powerful Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Chart Analysis</h3>
+                    <p>Upload any stock chart screenshot and our AI will analyze the trend patterns instantly.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🤖</div>
+                    <h3>LSTM Neural Network</h3>
+                    <p>Powered by advanced deep learning models trained on thousands of stock patterns.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💡</div>
+                    <h3>Smart Insights</h3>
+                    <p>Get personalized recommendations based on your risk profile and investment goals.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Real-time Results</h3>
+                    <p>Receive instant predictions with detailed probability breakdowns.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <h2 class="section-title">How It Works</h2>
+            <div class="steps-grid">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Upload Chart</h3>
+                    <p>Drag and drop or select your stock chart screenshot</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Configure Settings</h3>
+                    <p>Set your Y-axis range, risk profile, and investment horizon</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Get Predictions</h3>
+                    <p>Receive AI-powered trend analysis with detailed insights</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Predictor Section -->
+    <section id="predictor" class="predictor">
+        <div class="container">
+            <div class="predictor-header">
+                <h2 class="section-title">Stock Trend Predictor</h2>
+                <p class="section-subtitle">Upload your chart and let AI analyze the trend</p>
+            </div>
+
+            <div class="predictor-content">
+                <!-- Upload Section -->
+                <div class="upload-section">
+                    <div class="upload-card">
+                        <div id="dropZone" class="drop-zone">
+                            <div class="drop-zone-content">
+                                <svg class="upload-icon" width="64" height="64" viewBox="0 0 64 64" fill="none">
+                                    <path d="M32 42V22M32 22L24 30M32 22L40 30" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M52 42V52C52 53.0609 51.5786 54.0783 50.8284 54.8284C50.0783 55.5786 49.0609 56 48 56H16C14.9391 56 13.9217 55.5786 13.1716 54.8284C12.4214 54.0783 12 53.0609 12 52V42" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <h3>Drop your chart here</h3>
+                                <p>or click to browse</p>
+                                <span class="file-types">PNG, JPG up to 10MB</span>
+                            </div>
+                            <input type="file" id="fileInput" accept="image/png,image/jpeg,image/jpg" hidden>
+                        </div>
+
+                        <div id="previewSection" class="preview-section" style="display: none;">
+                            <div class="preview-header">
+                                <h4>Chart Preview</h4>
+                                <button id="removeImage" class="btn-icon">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                        <path d="M15 5L5 15M5 5L15 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <img id="imagePreview" src="" alt="Chart preview">
+                        </div>
+                    </div>
+
+                    <!-- Configuration Form -->
+                    <div class="config-card">
+                        <h3>Configuration</h3>
+                        <form id="predictionForm">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="yMin">Y-Axis Min</label>
+                                    <input type="number" id="yMin" step="0.01" placeholder="e.g., 100" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="yMax">Y-Axis Max</label>
+                                    <input type="number" id="yMax" step="0.01" placeholder="e.g., 200" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="nPoints">Sample Points</label>
+                                <input type="number" id="nPoints" value="300" min="100" max="1000">
+                                <small>Number of points to extract from chart (100-1000)</small>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="riskProfile">Risk Profile</label>
+                                <select id="riskProfile">
+                                    <option value="low">Low - Conservative</option>
+                                    <option value="medium" selected>Medium - Balanced</option>
+                                    <option value="high">High - Aggressive</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="horizon">Investment Horizon</label>
+                                <select id="horizon">
+                                    <option value="short" selected>Short Term (Days to Weeks)</option>
+                                    <option value="medium">Medium Term (Weeks to Months)</option>
+                                    <option value="long">Long Term (Months to Years)</option>
+                                </select>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-full" id="predictBtn">
+                                <span>Analyze Trend</span>
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Results Section -->
+                <div id="resultsSection" class="results-section" style="display: none;">
+                    <div class="results-card">
+                        <div class="results-header">
+                            <h3>Prediction Results</h3>
+                            <div id="trendBadge" class="trend-badge"></div>
+                        </div>
+
+                        <div class="prediction-main">
+                            <div class="prediction-label">Predicted Trend</div>
+                            <div id="trendResult" class="prediction-value"></div>
+                            <div id="confidenceText" class="confidence-text"></div>
+                        </div>
+
+                        <div class="probabilities">
+                            <h4>Probability Breakdown</h4>
+                            <div class="probability-bars">
+                                <div class="probability-item">
+                                    <div class="probability-header">
+                                        <span class="probability-label">
+                                            <span class="trend-icon trend-down">📉</span>
+                                            Down
+                                        </span>
+                                        <span id="probDown" class="probability-value">0%</span>
+                                    </div>
+                                    <div class="probability-bar">
+                                        <div id="barDown" class="probability-fill probability-fill-down"></div>
+                                    </div>
+                                </div>
+                                <div class="probability-item">
+                                    <div class="probability-header">
+                                        <span class="probability-label">
+                                            <span class="trend-icon trend-sideways">↔️</span>
+                                            Sideways
+                                        </span>
+                                        <span id="probSideways" class="probability-value">0%</span>
+                                    </div>
+                                    <div class="probability-bar">
+                                        <div id="barSideways" class="probability-fill probability-fill-sideways"></div>
+                                    </div>
+                                </div>
+                                <div class="probability-item">
+                                    <div class="probability-header">
+                                        <span class="probability-label">
+                                            <span class="trend-icon trend-up">📈</span>
+                                            Up
+                                        </span>
+                                        <span id="probUp" class="probability-value">0%</span>
+                                    </div>
+                                    <div class="probability-bar">
+                                        <div id="barUp" class="probability-fill probability-fill-up"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="chatbot-response">
+                            <h4>AI Insights</h4>
+                            <div id="chatbotMessage" class="chatbot-message"></div>
+                        </div>
+
+                        <div class="meta-info">
+                            <div class="meta-item">
+                                <span class="meta-label">Series Length:</span>
+                                <span id="seriesLength" class="meta-value">-</span>
+                            </div>
+                            <div class="meta-item">
+                                <span class="meta-label">Window Size:</span>
+                                <span id="windowSize" class="meta-value">-</span>
+                            </div>
+                            <div class="meta-item">
+                                <span class="meta-label">File:</span>
+                                <span id="fileName" class="meta-value">-</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Loading Overlay -->
+    <div id="loadingOverlay" class="loading-overlay" style="display: none;">
+        <div class="loading-content">
+            <div class="loading-spinner"></div>
+            <h3>Analyzing Chart...</h3>
+            <p>Our AI is processing your stock chart</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <svg width="32" height="32" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 35L15 20L25 28L35 5" stroke="url(#gradient2)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            <defs>
+                                <linearGradient id="gradient2" x1="5" y1="5" x2="35" y2="35">
+                                    <stop offset="0%" stop-color="#667eea"/>
+                                    <stop offset="100%" stop-color="#764ba2"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <span>Stock Trend AI</span>
+                    </div>
+                    <p class="footer-description">AI-powered stock trend prediction for smarter investment decisions.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Disclaimer</h4>
+                    <p class="disclaimer">This tool provides predictions based on AI analysis and should not be considered as financial advice. Always do your own research (DYOR) and consult with a qualified financial advisor before making investment decisions.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Stock Trend AI. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

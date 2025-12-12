@@ -1,0 +1,44 @@
+Current directory: C:\Users\HP\Desktop\KSR_Stock\stock_trend_api
+Files in directory: ['main.py', 'requirements.txt', 'scaler.pkl', 'stock_trend_model.h5', 'test_api.py', 'test_chart.png', 'test_model_loading.py', 'test_output.txt', 'venv', '__pycache__']
+
+==================================================
+Testing model loading...
+==================================================
+
+1. Checking if files exist...
+   stock_trend_model.h5 exists: True
+   scaler.pkl exists: True
+
+2. Loading scaler...
+Traceback (most recent call last):
+  File "C:\Users\HP\Desktop\KSR_Stock\stock_trend_api\test_model_loading.py", line 28, in <module>
+    scaler = joblib.load("scaler.pkl")
+  File "C:\Users\HP\Desktop\KSR_Stock\stock_trend_api\venv\Lib\site-packages\joblib\numpy_pickle.py", line 749, in load
+    obj = _unpickle(
+        fobj,
+    ...<2 lines>...
+        mmap_mode=validated_mmap_mode,
+    )
+  File "C:\Users\HP\Desktop\KSR_Stock\stock_trend_api\venv\Lib\site-packages\joblib\numpy_pickle.py", line 626, in _unpickle
+    obj = unpickler.load()
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\pickle.py", line 1256, in load
+    dispatch[key[0]](self)
+    ~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\pickle.py", line 1581, in load_stack_global
+    self.append(self.find_class(module, name))
+                ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\pickle.py", line 1622, in find_class
+    __import__(module, level=0)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'sklearn'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\HP\Desktop\KSR_Stock\stock_trend_api\test_model_loading.py", line 31, in <module>
+    print(f"   \u274c Error: {e}")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u274c' in position 3: character maps to <undefined>
